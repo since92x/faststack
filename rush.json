@@ -1,0 +1,65 @@
+ {
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.34.3",
+  "pnpmVersion": "5.10.4",
+  "pnpmOptions": {
+    "pnpmStore": "local",
+    "strictPeerDependencies": true,
+    "resolutionStrategy": "fast",
+    "preventManualShrinkwrapChanges": true,
+    "useWorkspaces": false
+  },
+  "nodeSupportedVersionRange": ">=10.13.0 <11.0.0 || >=12.13.0 <13.0.0",
+  // "suppressNodeLtsWarning": false,
+  "ensureConsistentVersions": true,
+  "projectFolderMinDepth": 2,
+  "projectFolderMaxDepth": 2,
+  // "allowMostlyStandardPackageNames": true,
+  "approvedPackagesPolicy": {
+    "reviewCategories": [
+      "libraries", // library projects that ship
+      "tests" // non-shipping test projects
+    ],
+    "ignoredNpmScopes": ["@types"]
+  },
+  "gitPolicy": {
+    // "allowedEmailRegExps": ["[^@]+@users\\.noreply\\.github\\.com"],
+    // "sampleEmail": "mrexample@users.noreply.github.com"
+    // "versionBumpCommitMessage": "Applying package updates. [skip-ci]"
+  },
+  "repository": {
+    "url": "git@github.com:since92x/faststack.git"
+  },
+  "eventHooks": {
+    "preRushInstall": [
+      // "common/scripts/pre-rush-install.js"
+    ],
+    "postRushInstall": [],
+    "preRushBuild": [],
+    "postRushBuild": []
+  },
+  "variants": [
+    // {
+    //   /**
+    //    * The folder name for this variant.
+    //    */
+    //   "variantName": "old-sdk",
+    //
+    //   /**
+    //    * An informative description
+    //    */
+    //   "description": "Build this repo using the previous release of the SDK"
+    // }
+  ],
+  // "telemetryEnabled": false,
+  // "hotfixChangeEnabled": false,
+  "projects": [
+    {
+      "packageName": "@faststack/fastx",
+      "projectFolder": "tools/fast",
+      "reviewCategory": "libraries",
+      "shouldPublish": true,
+      "cyclicDependencyProjects": []
+    }
+  ]
+}

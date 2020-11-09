@@ -1,0 +1,14 @@
+dependencies:
+  '@rush-temp/fastx': 'file:projects/fastx.tgz'
+lockfileVersion: 5.2
+packages:
+  'file:projects/fastx.tgz':
+    dev: false
+    name: '@rush-temp/fastx'
+    resolution:
+      integrity: sha512-i/8jxMrKgspNM+qhjR4WsRKeCxrUHqycwzSerAw2almhjTdD1hWu4mQtOTqv1bMaQkyZ7C3qL8/QJiDJUyO3YA==
+      tarball: 'file:projects/fastx.tgz'
+    version: 0.0.0
+registry: ''
+specifiers:
+  '@rush-temp/fastx': 'file:./projects/fastx.tgz'
